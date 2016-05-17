@@ -95,7 +95,9 @@ public class PIDatePicker: UIControl, UIPickerViewDataSource, UIPickerViewDelega
     Handles the common initialization amongst all init()
     */
     func commonInit() {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        // modified by yangfan
+//        self.translatesAutoresizingMaskIntoConstraints = false
+        self.pickerView.translatesAutoresizingMaskIntoConstraints = false
 
         self.pickerView.dataSource = self
         self.pickerView.delegate = self
@@ -541,7 +543,9 @@ public class PIDatePicker: UIControl, UIPickerViewDataSource, UIPickerViewDelega
             size = Double(dayComponentSizingString.sizeWithAttributes(stringSizingAttributes).width)
         } else if calendarComponent == .Year  {
             // Pad the year string to four digits.
-            let yearComponentSizingString = NSString(string: "00")
+            // modified by yangfan
+            let yearComponentSizingString = NSString(string: "0000")
+//            let yearComponentSizingString = NSString(string: "00")
             size = Double(yearComponentSizingString.sizeWithAttributes(stringSizingAttributes).width)
         }
         
