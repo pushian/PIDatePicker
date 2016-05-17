@@ -44,7 +44,7 @@ class PIViewController : UIViewController {
 }
 
 extension PIViewController: PIDatePickerDelegate {
-    func pickerView(pickerView: PIDatePicker, didSelectRow row: Int, inComponent component: Int) {
+    func datePickerView(pickerView: PIDatePicker, didSelectRow row: Int, inComponent component: Int) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .ShortStyle
         self.label.text = dateFormatter.stringFromDate(pickerView.date)

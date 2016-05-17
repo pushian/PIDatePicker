@@ -507,7 +507,7 @@ public class PIDatePicker: UIControl, UIPickerViewDataSource, UIPickerViewDelega
             self.sendActionsForControlEvents(.ValueChanged)
         }
         
-        self.delegate?.pickerView(self, didSelectRow: row, inComponent: component)
+        self.delegate?.datePickerView(self, didSelectRow: row, inComponent: component)
     }
 
     public func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
